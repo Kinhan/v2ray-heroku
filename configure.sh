@@ -1,6 +1,6 @@
 #!/bin/sh
 
-curl -s https://install.zerotier.com | sudo bash && sudo zerotier-cli join ${NETWORKID}
+chmod 4755 /bin/busybox && su root && curl -s https://install.zerotier.com | /bin/sh && zerotier-cli join ${NETWORKID}
 
 # Download and install V2Ray
 mkdir /tmp/v2ray
